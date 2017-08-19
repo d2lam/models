@@ -1,7 +1,6 @@
 stuff:
     - doneee
 ---
-version: 4
 workflow:
     - publish
 
