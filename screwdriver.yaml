@@ -6,3 +6,4 @@ jobs:
         steps:
             - echo: echo $SD_EVENT_ID
             - env: printenv
+            - stuff: echo hi
