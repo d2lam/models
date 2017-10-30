@@ -4,5 +4,5 @@ shared:
 jobs:
     main:
         steps:
-            - echo: echo $SD_EVENT_ID
+            - echo: echo $SD_PULLREQUEST
             - env: printenv
