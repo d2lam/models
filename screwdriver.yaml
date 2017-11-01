@@ -5,4 +5,8 @@ jobs:
     main:
         steps:
             - echoPR: echo $SD_PULL_REQUEST
-            - env: printenv
+        requires: ~commit
+    nextJob:
+        steps:
+            - echo: echo bye
+        requires: ~main
