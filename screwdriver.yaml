@@ -5,7 +5,7 @@ jobs:
     main:
         steps:
             - echoPR: echo $SD_PULL_REQUEST
-        requires: ~commit
+        requires: [~commit, ~pr]
     nextJob:
         steps:
             - echo: echo bye
