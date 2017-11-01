@@ -9,4 +9,4 @@ jobs:
     nextJob:
         steps:
             - echo: echo bye
-        requires: ~main
+        requires: main
