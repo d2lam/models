@@ -4,6 +4,5 @@ shared:
 jobs:
     main:
         steps:
-            - echo: echo $SD_EVENT_ID
-            - env: printenv
             - stuff: echo hi
+        requires: ~commit
