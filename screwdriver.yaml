@@ -9,4 +9,4 @@ jobs:
    publish:
        steps:
             - echo: echo bye
-       requires: main
+       requires: ['main']
