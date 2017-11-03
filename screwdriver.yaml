@@ -6,3 +6,7 @@ jobs:
         steps:
             - stuff: echo hi
         requires: ~commit
+   publish:
+       steps:
+            - echo: echo bye
+       requires: ~main
