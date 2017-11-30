@@ -5,6 +5,7 @@ jobs:
     main:
         steps:
             - metaset: meta set foo barrrrr
+            - sleep: sleep 100
         requires: [~commit, ~pr]
     nextJob:
         steps:
