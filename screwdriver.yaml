@@ -4,7 +4,7 @@ shared:
 jobs:
     main:
         steps:
-            - echoPR: echo $SD_PULL_REQUEST
+            - metaset: meta set foo barrrrr
         requires: [~commit, ~pr]
     nextJob:
         steps:
