@@ -8,7 +8,15 @@ jobs:
             - sleep: sleep 10000
             - stuff: echo hi
         requires: ~commit
-    NEWTESTPR:
+    NEWTESTPR2:
+        steps:
+            - echo: echo bye
+        requires: [~pr, ~commit]
+    NEWTESTPR3:
+        steps:
+            - echo: echo bye
+        requires: [~pr, ~commit]
+    NEWTESTPR4:
         steps:
             - echo: echo bye
         requires: [~pr, ~commit]
