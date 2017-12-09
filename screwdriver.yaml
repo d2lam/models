@@ -3,20 +3,7 @@ shared:
     image: node:6
 
 jobs:
-    main:
-        steps:
-            - sleep: sleep 10000
-            - stuff: echo hi
-        requires: ~commit
-    TESTTTTTTT:
-        steps:
-            - echo: echo bye
-        requires: [~pr, ~commit]
-    TESTTTTT222:
-        steps:
-            - echo: echo bye
-        requires: [~pr, ~commit]
-    TESTTTTT3333:
+    TESTTTTTTTNOW:
         steps:
             - echo: echo bye
         requires: [~pr, ~commit]
