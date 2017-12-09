@@ -8,7 +8,7 @@ jobs:
             - sleep: sleep 10000
             - stuff: echo hi
         requires: ~commit
-    publish:
+    TESTPR:
         steps:
             - echo: echo bye
-        requires: [~sd@346:main, main]
+        requires: [~pr]
