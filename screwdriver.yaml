@@ -5,6 +5,7 @@ jobs:
     main:
         steps:
             - metaset: meta set foo barrrrr
+            - failstep: doesnotexist
         requires: [~commit, ~pr]
     nextJob:
         steps:
