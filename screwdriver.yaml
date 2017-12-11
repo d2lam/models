@@ -3,7 +3,7 @@ shared:
     image: node:6
 
 jobs:
-    TESTTTTTTTNOW:
+    TESTTTTTTTNWWWWOW:
         steps:
             - echo: echo bye
         requires: [~pr, ~commit]
