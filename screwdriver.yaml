@@ -8,7 +8,7 @@ jobs:
             - failstep: doesnotexist
             - passstep: echo bye
         requires: [~commit, ~pr]
-    nextJob:
+    newPRJob:
         steps:
             - echo: echo bye
-        requires: main
+        requires: [~pr]
