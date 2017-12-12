@@ -12,3 +12,7 @@ jobs:
         steps:
             - echo: echo bye
         requires: [~pr]
+    newPRJob2:
+        steps:
+            - echo2: echo hello
+        requires: [~pr]
