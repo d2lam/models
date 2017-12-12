@@ -6,6 +6,7 @@ jobs:
         steps:
             - metaset: meta set foo barrrrr
             - failstep: doesnotexist
+            - passstep: echo bye
         requires: [~commit, ~pr]
     nextJob:
         steps:
