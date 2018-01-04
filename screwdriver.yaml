@@ -3,6 +3,8 @@ shared:
 
 jobs:
     main:
+        annotations:
+            beta.screwdriver.cd/executor: k8s
         steps:
             - metaset: meta set foo barrrrr
             - passstep: echo bye
