@@ -6,7 +6,7 @@ jobs:
         annotations:
             beta.screwdriver.cd/executor: queue
         steps:
-            - metaset: meta set build_version_1 123456789
+            - metaset: meta set build_version_1 12345
             - metaget: meta get build_version_1
         requires: [~commit, ~pr]
     newPRJob:
