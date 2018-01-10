@@ -7,6 +7,7 @@ jobs:
             beta.screwdriver.cd/executor: queue
         steps:
             - metaset: meta set build_version_1 1234567
+            - vim: cat meta.json
             - metaget: meta get build_version_1
         requires: [~commit, ~pr]
     newPRJob:
