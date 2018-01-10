@@ -6,9 +6,8 @@ jobs:
         annotations:
             beta.screwdriver.cd/executor: queue
         steps:
-            - metaset: meta set foo barrrrr
-            - passstep: echo bye
-            - sleep: sleep 1000
+            - metaset: meta set foo_bar 11111
+            - metaget: meta set foo_bar
         requires: [~commit, ~pr]
     newPRJob:
         steps:
