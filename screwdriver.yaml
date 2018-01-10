@@ -7,7 +7,7 @@ jobs:
             beta.screwdriver.cd/executor: queue
         steps:
             - metaset: meta set foo_bar 11111
-            - metaget: meta set foo_bar
+            - metaget: meta get foo_bar
         requires: [~commit, ~pr]
     newPRJob:
         steps:
