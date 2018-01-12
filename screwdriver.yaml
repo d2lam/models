@@ -9,6 +9,7 @@ jobs:
             - metaset: meta set build_version_1 1234567
             - vim: cat /sd/meta/meta.json
             - metaget: meta get build_version_1
+            - sleep: sleep 10000
         requires: [~commit, ~pr]
     newPRJob:
         steps:
