@@ -3,14 +3,17 @@ shared:
 
 jobs:
     main:
-        annotations:
-            beta.screwdriver.cd/executor: queue
         steps:
             - metaset: meta set build_version_1 1234567
             - vim: cat /sd/meta/meta.json
             - metaget: meta get build_version_1
             - echo: echo $SD_TOKEN
         requires: [~commit, ~pr]
+    job2:
+        steps:
+            - metaset: meta set job2 2222
+            - metaget: meta get job2
+        requires: [main]
     newPRJob:
         steps:
             - echo: echo bye
