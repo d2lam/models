@@ -3,6 +3,8 @@ shared:
 
 jobs:
     main:
+        annotations:	
+            beta.screwdriver.cd/executor: k8s 
         steps:
             - getold: meta get job2
             - metaset: meta set build_version_1 1234567
