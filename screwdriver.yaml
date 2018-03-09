@@ -11,7 +11,6 @@ jobs:
             - vim: cat /sd/meta/meta.json
             - metaget: meta get build_version_1
             - echo: echo $SD_TOKEN
-            - sleep: sleep 1000
         requires: [~commit, ~pr]
     job2:
         steps:
