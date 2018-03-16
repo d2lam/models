@@ -2,25 +2,24 @@ shared:
     image: node:6
 
 jobs:
-    main:
-        annotations:	
-            beta.screwdriver.cd/executor: k8s 
+    job1:
         steps:
-            - getold: meta get job2
-            - metaset: meta set build_version_1 1234567
+            - getold: meta get job3
+            - metaset: meta set job1 set-by-job1
             - vim: cat /sd/meta/meta.json
-            - metaget: meta get build_version_1
             - echo: echo $SD_TOKEN
         requires: [~commit, ~pr]
     job2:
         steps:
-            - metaset: meta set job2 2222
-            - metaget: meta get job2
+            - echo: echo hi
+            - metaset: meta set job2 set-by-job2
         requires: [~commit]
     job3:
         steps:
-            - metaset: meta set job2 2222
+            - metaset: meta set job3 set-by-job3
+            - metaget: meta get job1
             - metaget: meta get job2
+            - metaget: meta get job3
         requires: [main, job2]
     newPRJob:
         steps:
