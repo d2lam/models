@@ -11,13 +11,17 @@ jobs:
         requires: [~commit, ~pr]
     job2:
         steps:
-            - echo: echo hi
             - metaset: meta set job2 set-by-job2
         requires: [~commit]
     job3:
         steps:
-            - metaset: meta set job3 set-by-job3
+            - metaset: meta set job2 set-by-job3
+        requires: [~commit]
+    job3:
+        steps:
+            - metaset: meta set job4 set-by-job4
             - metaget1: meta get job1
             - metaget2: meta get job2
             - metaget3: meta get job3
-        requires: [job1, job2]
+            - metaget3: meta get job4
+        requires: [job1, job2, job3]
