@@ -17,7 +17,7 @@ jobs:
         steps:
             - metaset: meta set job2 set-by-job3
         requires: [~commit]
-    job3:
+    job4:
         steps:
             - metaset: meta set job4 set-by-job4
             - metaget1: meta get job1
