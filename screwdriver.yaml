@@ -16,7 +16,12 @@ jobs:
         steps:
             - metaset: meta set job2 2222
             - metaget: meta get job2
-        requires: [main]
+        requires: [~commit]
+    job3:
+        steps:
+            - metaset: meta set job2 2222
+            - metaget: meta get job2
+        requires: [main, job2]
     newPRJob:
         steps:
             - echo: echo bye
