@@ -8,13 +8,13 @@ jobs:
             - metaset: meta set job1 set-by-job1
             - vim: cat /sd/meta/meta.json
             - echo: echo $SD_TOKEN
-            - exit: exit 1
             - sleep: sleep 1
         requires: [~commit, ~pr]
     job2:
         steps:
             - metaset: meta set job2 set-by-job2
             - sleep: sleep 10
+            - exit: exit 1
         requires: [~commit]
     job3:
         steps:
