@@ -17,7 +17,7 @@ jobs:
     job3:
         steps:
             - metaset: meta set job3 set-by-job3
-            - metaget: meta get job1
-            - metaget: meta get job2
-            - metaget: meta get job3
+            - metaget1: meta get job1
+            - metaget2: meta get job2
+            - metaget3: meta get job3
         requires: [job1, job2]
