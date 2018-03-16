@@ -28,3 +28,11 @@ jobs:
             - metaget3: meta get job3
             - metaget3: meta get job4
         requires: [job1, job2, job3]
+    job5:
+        steps:
+            - metaset: meta set job5 set-by-job5
+        requires: [~commit]
+    job6:
+        steps:
+            - metaget: meta get job5
+        requires: [job5]
