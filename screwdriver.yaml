@@ -13,7 +13,7 @@ jobs:
     job2:
         steps:
             - metaset: meta set job2 set-by-job2
-            - sleep: sleep 10
+            - sleep: exit 1
         requires: [~commit]
     job3:
         steps:
