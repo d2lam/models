@@ -26,7 +26,6 @@ jobs:
             - metaget1: meta get job1
             - metaget2: meta get job2
             - metaget3: meta get job3
-            - metaget3: meta get job4
         requires: [job1, job2, job3]
     job5:
         steps:
