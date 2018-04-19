@@ -9,6 +9,8 @@ jobs:
             - vim: cat /sd/meta/meta.json
             - echo: echo $SD_TOKEN
             - sleep: sleep 1000
+        annotations:
+            beta.screwdriver.cd/timeout: 30
         requires: [~commit, ~pr]
     job2:
         steps:
