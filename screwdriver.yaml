@@ -43,3 +43,17 @@ jobs:
         steps:
             - echo: echo hi
         requires: [~pr, ~commit]
+
+    job-periodic2:
+        annotations:
+            screwdriver.cd/buildPeriodically: H * * * *
+        steps:
+            - echo: echo hi
+        requires: [~pr, ~commit]
+        
+    job-periodic3:
+        annotations:
+            screwdriver.cd/buildPeriodically: H * * * *
+        steps:
+            - echo: echo hi
+        requires: [~pr, ~commit]
