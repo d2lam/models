@@ -2,12 +2,6 @@ shared:
     image: node:6
 
 jobs:
-    job0:
-        steps:
-            - echo: echo hi
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        requires: [~commit, ~pr]
     job1:
         steps:
             - getold: meta get job3
