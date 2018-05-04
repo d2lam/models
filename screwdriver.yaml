@@ -44,6 +44,8 @@ jobs:
             - metaget: meta get job5
         requires: [job5]
     job-periodic:
+        annotations:
+            screwdriver.cd/buildPeriodically: H * * * *
         steps:
             - echo: echo hi
         requires: [~pr, ~commit]
