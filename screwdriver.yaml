@@ -43,3 +43,7 @@ jobs:
         steps:
             - metaget: meta get job5
         requires: [job5]
+    job-periodic:
+        steps:
+            - echo: echo hi
+        requires: [~pr, ~commit]
