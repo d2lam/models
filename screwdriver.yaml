@@ -1,81 +1,18 @@
-shared:
-    image: node:6
-
+---
 jobs:
-    job1:
-        steps:
-            - getold: meta get job3
-            - metaset: meta set job1 set-by-job1
-            - vim: cat /sd/meta/meta.json
-            - echo: echo $SD_TOKEN
-            - sleep: sleep 1000
-        annotations:
-            beta.screwdriver.cd/timeout: 30
-        requires: [~commit, ~pr]
-    job2:
-        steps:
-            - metaset: meta set job2 set-by-job2
-            - sleep: sleep 10
-        requires: [~commit]
-    job3:
-        steps:
-            - metaset: meta set job3 set-by-job3
-            - sleep: sleep 20
-        requires: [~commit]
-    job4:
-        steps:
-            - metaset: meta set job4 set-by-job4
-            - metaget1: meta get job1
-            - metaget2: meta get job2
-            - metaget3: meta get job3
-        requires: [job1, job2, job3]
-    job5:
-        steps:
-            - metaset: meta set job5 set-by-job5
-        requires: [~commit]
-    job6:
-        steps:
-            - metaget: meta get job5
-        requires: [job5]
-    job-periodic:
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        steps:
-            - echo: echo hi
-        requires: [~pr, ~commit]
-    job-periodic2:
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        steps:
-            - echo: echo hi
-        requires: [~pr, ~commit]
-    job-periodic3:
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        steps:
-            - echo: echo hi
-        requires: [~pr, ~commit]
-    job-periodic4:
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        steps:
-            - echo: echo hi
-        requires: [~pr, ~commit]
-    job-periodic5:
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        steps:
-            - echo: echo hi
-        requires: [~pr, ~commit]
-    job-periodic6:
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        steps:
-            - echo: echo hi
-        requires: [~pr, ~commit]
-    job-periodic7:
-        annotations:
-            screwdriver.cd/buildPeriodically: H * * * *
-        steps:
-            - echo: echo hi
-        requires: [~pr, ~commit]
+ A:
+  requires: []
+  image: docker-registory.com/yuichi10/docker-image:latest
+  steps:
+    - logs: echo "e2e"
+ B:
+  requires: []
+  image: docker-registory.com/yuichi10/docker-image:latest
+  steps:
+    - a: echo "a"
+ C:
+  requires: [A, B]
+  # template: ysawada/failed-template
+  image: docker-registory.com/yuichi10/docker-image:latest
+  steps:
+  - b: echo "sample"
