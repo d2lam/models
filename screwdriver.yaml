@@ -6,4 +6,4 @@ jobs:
     
         steps:
             - echo: echo hi
-    requires: [~commit, ~pr]
+        requires: [~commit, ~pr]
