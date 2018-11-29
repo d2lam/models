@@ -1,18 +1,7 @@
----
+image: node:6
+environment:
+    USER_SHELL_BIN: bash
 jobs:
- A:
-  requires: []
-  image: docker-registory.com/yuichi10/docker-image:latest
-  steps:
-    - logs: echo "e2e"
- B:
-  requires: []
-  image: docker-registory.com/yuichi10/docker-image:latest
-  steps:
-    - a: echo "a"
- C:
-  requires: [A, B]
-  # template: ysawada/failed-template
-  image: docker-registory.com/yuichi10/docker-image:latest
-  steps:
-  - b: echo "sample"
+    test: 
+        steps:
+            - echo: echo hi
