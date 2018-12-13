@@ -1,8 +1,8 @@
 jobs:
-    annotations:
-        screwdriver.cd/cpu: HIGH
-        screwdriver.cd/memory: HIGH
     test:
+        annotations:
+            screwdriver.cd/cpu: HIGH
+            screwdriver.cd/memory: HIGH
         environment:
             USER_SHELL_BIN: bash
         image: node:6
