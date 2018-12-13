@@ -1,4 +1,7 @@
 jobs:
+    annotations:
+        screwdriver.cd/cpu: HIGH
+        screwdriver.cd/memory: HIGH
     test:
         environment:
             USER_SHELL_BIN: bash
