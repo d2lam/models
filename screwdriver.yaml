@@ -6,7 +6,7 @@ jobs:
         environment:
             USER_SHELL_BIN: bash
         image: node:6
-    
         steps:
             - echo: echo $SD_TOKEN
+            - sleep: sleep 1000
         requires: [~commit, ~pr]
