@@ -7,5 +7,7 @@ jobs:
             USER_SHELL_BIN: bash
         image: node:6
         steps:
+            - set: meta set foo bar
+            - get: meta get foo
             - echo: echo $SD_TOKEN
         requires: [~commit, ~pr]
