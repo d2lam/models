@@ -10,4 +10,8 @@ jobs:
             - set: meta set foo bar
             - get: meta get foo
             - echo: echo $SD_TOKEN
+            - test: |
+                echo hi
+                echo bye
+                echo world
         requires: [~commit, ~pr]
