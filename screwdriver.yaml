@@ -7,6 +7,8 @@ jobs:
             USER_SHELL_BIN: bash
         image: node:6
         steps:
+            - getget: meta get pipelineId
+            - cat: cat /sd/meta/meta.json
             - set: meta set foo bar
             - get: meta get foo
             - echo: echo $SD_TOKEN
