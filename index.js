@@ -1,3 +1,4 @@
+// test
 'use strict';
 
 const BuildFactory = require('./lib/buildFactory');
