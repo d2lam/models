@@ -1,20 +1,7 @@
 jobs:
     test:
-        annotations:
-            screwdriver.cd/cpu: HIGH
-            screwdriver.cd/memory: HIGH
-        environment:
-            USER_SHELL_BIN: bash
         image: node:6
         steps:
-            - getget: ls -la ~/.ssh/
-            - cat: cat /sd/meta/meta.json
-            - set: meta set foo bar
-            - get: meta get foo
-            - echo: echo $SD_TOKEN
-            - test: |
-                echo hi
-                echo bye
-                echo world
+            - env: env
         requires: [~commit, ~pr]
         sourcePaths: [screwdriver.yaml]
