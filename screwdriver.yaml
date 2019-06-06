@@ -3,4 +3,6 @@ jobs:
         image: node:6
         steps:
             - env: env
+            - ls: ls /tmp
+            - ls2: ls /sd
         requires: [~pr:staging, ~commit]
