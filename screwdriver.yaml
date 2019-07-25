@@ -2,7 +2,11 @@ jobs:
     averylongjobnametestingalongjobname:
         image: node:6
         steps:
+            - echo: echo $BAZ
             - env: env
             - ls: ls /tmp
             - ls2: ls /sd
         requires: [~pr:staging, ~commit]
+        environment:
+            FOO: BAR
+            BAZ: Hello-$FOO
