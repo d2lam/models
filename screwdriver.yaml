@@ -10,3 +10,8 @@ jobs:
         environment:
             FOO: BAR
             BAZ: Hello-$FOO
+    test:
+        image: node:6
+        steps:
+            - meta: meta set foo
+        requires: [~commit]
