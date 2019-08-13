@@ -7,7 +7,7 @@ jobs:
             - ls: ls /tmp
             - ls2: ls /sd
         requires: [~pr:staging, ~commit]
-        secret:
+        secrets:
             - MYSECRET
         environment:
             HELLO: hello${MYSECRET}
