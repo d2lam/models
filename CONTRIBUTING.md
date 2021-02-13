@@ -1,4 +1,4 @@
-# Contributing
+## Contributing
 
 Thank you for considering contributing! There are many ways you can help.
 
